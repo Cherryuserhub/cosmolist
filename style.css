@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 50px 40px;
+    width: 100%;
+    max-width: 520px;
+}
+
+/* Current Time & Date */
+.datetime {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a5568;
+}
+
+#currentTime {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+#currentDate {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-top: 6px;
+}
+
+h1 {
+    text-align: center;
+    color: #4a5568;
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #718096;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* Stopwatch */
+.stopwatch {
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 20px;
+    background: #f0f4f8;
+    border-radius: 18px;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stopwatch-display {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: #2d3748;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.stopwatch-controls button {
+    padding: 10px 20px;
+    margin: 0 8px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.stopwatch-controls button:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+}
+
+.stopwatch-controls button:active {
+    transform: translateY(0);
+}
+
+/* To-Do Styles (unchanged from before) */
+.input-section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+#taskInput:focus {
+    border-color: #a0aec0;
+    box-shadow: 0 0 0 4px rgba(160, 174, 192, 0.2);
+}
+
+#addBtn {
+    padding: 16px 28px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#addBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    background: #f7fafc;
+    margin-bottom: 12px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+li.completed {
+    opacity: 0.6;
+    background: #edf2f7;
+}
+
+li.completed .task-text {
+    text-decoration: line-through;
+    color: #a0aec0;
+}
+
+input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-right: 18px;
+    cursor: pointer;
+    accent-color: #667eea;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 1.15rem;
+    color: #2d3748;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: #e53e3e;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.2s;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.empty-state {
+    text-align: center;
+    color: #a0aec0;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+/* … all your previous styles stay exactly the same … */
+
+/* New: tiny music control button in bottom right */
+.music-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(102, 126, 234, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.music-toggle:hover {
+    transform: scale(1.1);
+    background: rgba(118, 75, 162, 0.9);
+}

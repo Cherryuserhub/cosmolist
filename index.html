@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Current Time & Date -->
+        <div class="datetime">
+            <div id="currentTime">00:00:00</div>
+            <div id="currentDate">Friday, December 19, 2025</div>
+        </div>
+
+        <h1>✨ My To-Do</h1>
+        <p class="subtitle">Stay organized, stay calm</p>
+
+        <!-- Stopwatch -->
+        <div class="stopwatch">
+            <div class="stopwatch-display" id="stopwatchDisplay">00:00:00</div>
+            <div class="stopwatch-controls">
+                <button id="startBtn">Start</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+        </div>
+
+        <!-- To-Do Input -->
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="What needs to be done today?">
+            <button id="addBtn">Add</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+        <div class="empty-state" id="emptyState">
+            No tasks yet. Add one above to get started! 🌿
+        </div>
+    </div>
+
+    <!-- Faint lo-fi music (added here) -->
+    <audio id="bgMusic" loop volume="0.12">
+        <source src="https://cdn.pixabay.com/audio/2023/02/28/audio_3b8d8f8e8c.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
